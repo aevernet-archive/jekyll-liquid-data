@@ -1,11 +1,26 @@
-/.bundle/
-/.yardoc
 /_yardoc/
 /coverage/
 /doc/
 /pkg/
 /spec/reports/
 /tmp/
-
 # rspec failure tracking
 .rspec_status
+# hidden files
+.*
+!.git*
+!.editorconfig
+!.travis.yml
+!.husky
+!.commitlintrc.js
+!.versionrc.json
+!.rspec
+!.rubocop.yml
+
+# rubygem
+*.gem
+Gemfile.lock
+
+# npm dependencies
+node_modules
+package-lock.json

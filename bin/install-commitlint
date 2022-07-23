@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+if ! command -v npm &> /dev/null; then
+    echo "Please install Node.js & npm before proceeding"
+    exit 1
+fi
+
+if ! command -v commitlint &> /dev/null; then
+    npm install --save-dev --location=global @commitlint/cli @commitlint/config-conventional
+fi
+
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > .commitlintrc.js
+
+if ! command -v husky &> /dev/null; then
+    npm install --save-dev --location=global husky
+fi
+
+husky install
+
+if [[ ! -f .husky/commit-msg  ]]; then
+    cat <<EEE > .husky/commit-msg
+#!/bin/bash
+. "\$(dirname "\$0")/_/husky.sh"
+npx --no -- commitlint --edit "\${1}"
+EEE
+
+    chmod a+x .husky/commit-msg
+fi
+

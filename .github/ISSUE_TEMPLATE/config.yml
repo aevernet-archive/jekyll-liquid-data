@@ -1,0 +1,30 @@
+blank_issues_enabled: true
+contact_links:
+  - name: RedEyed Jekyll Theme Support @ GitHub
+    url: https://github.com/aevernet/jekyll-liquid-data/discussions
+    about: Please ask and answer questions here.
+
+  - name: RedEyed Jekyll Theme Wiki
+    url: https://github.com/aevernet/jekyll-liquid-data/wiki
+    about: Find documentation for the project here.
+
+  - name: RedEyed Jekyll Theme Issue Tracker
+    url: https://github.com/aevernet/jekyll-liquid-data/issues
+    about: Submit Bug Reports and Feature Requests here.
+
+  - name: PATREON | RAGDATA
+    url: https://www.patreon.com/ragdata
+    about: Support me @ Patreon
+
+  - name: Sponsor me @ Github
+    url: https://github.com/sponsors/Ragdata
+    about: Become a project supporter
+
+  - name: Support me @ Liberapay
+    url: https://liberapay.com/Ragdata
+    about: Support me @ Liberapay
+
+  - name: Buy me a Coffee
+    url: https://ko-fi.com/ragdata
+    about: Buy me a Coffee
+
